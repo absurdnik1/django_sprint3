@@ -50,7 +50,7 @@ class Post(models.Model):
         User,
         on_delete=models.CASCADE,
         verbose_name='Автор публикации'
-        )
+    )
     location = models.ForeignKey(
         Location,
         on_delete=models.SET_NULL, null=True,
