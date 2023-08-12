@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
-verbose_name = ''
 
 
 class Category(models.Model):
@@ -55,7 +54,7 @@ class Post(models.Model):
         Location,
         on_delete=models.SET_NULL, null=True,
         verbose_name='Местоположение',
-        related_name='locations'
+        related_name='posts'
     )
     category = models.ForeignKey(
         Category,

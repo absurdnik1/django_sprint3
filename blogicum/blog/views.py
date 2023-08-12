@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Post
 from django.utils import timezone
 
+OFFSET = 0
+LIMIT = 5
+
 
 def index(request):
     OFFSET = 0
