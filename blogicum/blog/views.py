@@ -28,7 +28,7 @@ def post_detail(request, pk):
 def category_posts(request, category_slug):
     template = 'blog/category.html'
     category = get_object_or_404(Category, slug=category_slug,
-                                          is_published=True)
+                                 is_published=True)
     post_list = category.posts.filter(
         is_published=True,
         pub_date__lte=timezone.now(),
